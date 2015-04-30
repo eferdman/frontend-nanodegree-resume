@@ -27,8 +27,8 @@ var work = {
 			"employer": "InstaEdu",
 			"title" :  "Tutor",
 			"location" : "Berkeley",
-			"dates" : "2014-present",
-			"description" : "Tutor students of all ages in math, English, and foreign language"
+			"dates" : "September 2014-present",
+			"description" : "Tutor students online in math, writing, and foreign language"
 		}
 	]
 }
@@ -58,3 +58,28 @@ if (bio.skills.length > 0) {
 	$("#skills").append(formattedSkill);
 	
 }
+
+function displayWork() {
+	for (job in work.jobs) {
+	$("#workExperience").append(HTMLworkStart);
+	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+	var formattedEmployerTitle = formattedEmployer + formattedTitle;
+	$(".work-entry:last").append(formattedEmployerTitle);
+	
+	var formattedDate = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+	$(".work-entry:last").append(formattedDate);
+
+	var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+	$(".work-entry:last").append(formattedLocation);
+
+	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+	$(".work-entry:last").append(formattedDescription);
+
+	}
+
+}
+
+displayWork();
+
+
