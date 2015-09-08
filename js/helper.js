@@ -124,22 +124,22 @@ function initializeMap() {
   function locationFinder() {
 
     // initializes an empty array
-    var locations = ["Beverly Hills"];
+    var locations = ["Berkeley"];
 
-    // adds the single location property from bio to the locations array
-    locations.push(bio.contacts.location);
+    // // adds the single location property from bio to the locations array
+    // locations.push(data.bio.contacts.location);
 
-    // iterates through school locations and appends each location to
-    // the locations array
-    for (var school in education.schools) {
-      locations.push(education.schools[school].location);
-    }
+    // // iterates through school locations and appends each location to
+    // // the locations array
+    // for (var school in data.education.schools) {
+    //   locations.push(data.education.schools[school].location);
+    // }
 
-    // iterates through work locations and appends each location to
-    // the locations array
-    for (var job in work.jobs) {
-      locations.push(work.jobs[job].location);
-    }
+    // // iterates through work locations and appends each location to
+    // // the locations array
+    // for (var job in data.work.jobs) {
+    //   locations.push(data.work.jobs[job].location);
+    // }
 
     return locations;
   }
